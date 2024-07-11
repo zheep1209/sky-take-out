@@ -80,7 +80,6 @@ public class EmployeeController {
     * */
     @PostMapping
     public Result save(@RequestBody EmployeeDTO employeeDTO) {
-        System.out.println("当前的线程为："+Thread.currentThread().getId());
         log.info("新增员工:{}", employeeDTO);
         employeeService.save(employeeDTO);
         return Result.success();
